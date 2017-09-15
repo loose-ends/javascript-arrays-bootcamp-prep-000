@@ -5,6 +5,7 @@ const fs = require('fs')
 const jsdom = require('mocha-jsdom')
 const path = require('path')
 
+
 describe('arrays', () => {
   jsdom({
     src: fs.readFileSync(path.resolve(__dirname, '..', 'arrays.js'), 'utf-8')
@@ -32,7 +33,7 @@ describe('arrays', () => {
 
   describe('destructivelyAddElementToBeginningOfArray(array, element)', () => {
     it('adds an element to the beginning of an array', () => {
-      expect(destructivelyAddElementToBeginningOfArray([1], 'foo')).to.eql(['foo', 1])
+      expect(destructivelyAddElementToBeginningOfArray([1], 'foo')).to.eql(['foo', [1])
     })
 
     it('alters the original array', () => {
